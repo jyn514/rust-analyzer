@@ -550,12 +550,14 @@ fn arg_list(p: &mut Parser) {
     let m = p.start();
     p.bump(T!['(']);
     while !p.at(T![')']) && !p.at(EOF) {
+        let arg = p.start();
         attributes::outer_attributes(p);
         if !p.at_ts(EXPR_FIRST) {
             p.error("expected expression");
             break;
         }
         expr(p);
+        arg.complete(p, ARG);
         if !p.at(T![')']) && !p.expect(T![,]) {
             break;
         }

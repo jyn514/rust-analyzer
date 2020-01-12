@@ -239,6 +239,7 @@ pub enum SyntaxKind {
     PARAM,
     SELF_PARAM,
     ARG_LIST,
+    ARG,
     TYPE_BOUND,
     TYPE_BOUND_LIST,
     MACRO_ITEMS,

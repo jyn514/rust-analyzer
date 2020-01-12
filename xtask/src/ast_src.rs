@@ -211,6 +211,7 @@ pub(crate) const KINDS_SRC: KindsSrc = KindsSrc {
         "PARAM",
         "SELF_PARAM",
         "ARG_LIST",
+        "ARG",
         "TYPE_BOUND",
         "TYPE_BOUND_LIST",
         // macro related
